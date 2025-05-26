@@ -33,7 +33,7 @@
 
 |  [封面效果图1](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index1.png) |  [封面效果图2](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index2.png)| 
 |:---:|:---:|
-| ![Résumé](ttps://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index1.png) | ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index2.png)| 
+| ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index1.png) | ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index2.png)| 
 
 ## 参考
 
