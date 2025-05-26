@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <a href="https://github.com/XiaoZhou2024/BNU_Latex_Template">
-    <img alt="BNU_Latex_Template" src="https://github.com/jweihe/UCAS_Latex_Template/blob/main/figures/ucas_logo.png"  />
+    <img alt="BNU_Latex_Template" src="https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/bnu_logo.png"  />
   </a>
 
   <br />
@@ -31,9 +31,9 @@
 
 ---------
 
-|  [封面效果图](https://github.com/XiaoZhou2024/BNU_Latex_Template/figures/index1.png) |  [目录效果图](https://github.com/XiaoZhou2024/BNU_Latex_Template/figures/index1.png)| 
+|  [封面效果图1](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index1.png) |  [封面效果图2](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index2.png)| 
 |:---:|:---:|
-| ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/figures/index2) | ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/figures/index2)| 
+| ![Résumé](ttps://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index1.png) | ![Résumé](https://github.com/XiaoZhou2024/BNU_Latex_Template/blob/main/figures/index2.png)| 
 
 ## 参考
 
