@@ -37,6 +37,6 @@
 
 ## 参考
 
-+ [GBT7714-2015标准下的BibTex样式](https://github.com/zepinglee/gbt7714-bibtex-style)
+
 + [国科大大学课程论文模板](https://github.com/jweihe/UCAS_Latex_Template)
 
