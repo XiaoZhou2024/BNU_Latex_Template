@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%BNU课程论文模板
+%%GitHub：https://github.com/jweihe/UCAS_Latex_Template
+%%Overleaf：https://www.overleaf.com/latex/templates/bnuke-cheng-lun-wen-mo-ban/bcwvxncqffkw
+
+%%最后更改于2025/05/25
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%在"中国科学院大学课程论文模板"基础上修改而来
+%%原作者：jweihe
+%%Overleaf地址：https://www.overleaf.com/latex/templates/bnuke-cheng-lun-wen-mo-ban/bcwvxncqffkw
+
+%%在"北京大学课程论文模板"基础上修改而来
+%%原作者：Shawn Wang
+%%Overleaf地址：https://www.overleaf.com/latex/templates/bei-jing-da-xue-ke-cheng-lun-wen-mo-ban/yntmqcktrzfh
+
+
+\ProvidesPackage{BNUReport}
+
+%%页边距
+\RequirePackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
+
+%%一些必要的宏包
+\RequirePackage[unicode=true,colorlinks,urlcolor=blue,linkcolor=blue,bookmarksnumbered=blue]{hyperref}
+\RequirePackage{latexsym,amssymb,amsmath,amsbsy,amsopn,amstext,amsthm,amsxtra,color,bm,calc,ifpdf}
+\RequirePackage{graphicx}
+\RequirePackage{enumerate}
+\RequirePackage{fancyhdr}
+\RequirePackage{listings}
+\RequirePackage{multirow}
+\RequirePackage{makeidx}
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+\RequirePackage{subfigure}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\RequirePackage{pythonhighlight}
+
+\RequirePackage{tcolorbox}
+
+\RequirePackage{fontawesome}
+\RequirePackage{ulem}
+
+\setmainfont{Times New Roman} % 设置西文字体
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+%% 更改摘要二字的样式
+\renewcommand{\abstractname}{\textbf{\large {摘\quad 要}}} 
+
+%可固定下划线长度
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+
+
+%更改主题
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=blue,      
+%     urlcolor=Magenta,
+%     citecolor=orange,
+% }
+
+%%对一些autoref的中文引用名作修改
+\def\equationautorefname{式}
+\def\footnoteautorefname{脚注}
+\def\itemautorefname{项}
+\def\figureautorefname{图}
+\def\tableautorefname{表}
+\def\partautorefname{篇}
+\def\appendixautorefname{附录}
+\def\chapterautorefname{章}
+\def\sectionautorefname{节}
+\def\subsectionautorefname{小小节}
+\def\subsubsectionautorefname{subsubsection}
+\def\paragraphautorefname{段落}
+\def\subparagraphautorefname{子段落}
+\def\FancyVerbLineautorefname{行}
+\def\theoremautorefname{定理}
+
+\newtheorem{Theorem}{定理}[section]
+\newtheorem{Lemma}[Theorem]{引理}
+\newtheorem{Corollary}[Theorem]{推论}
+\newtheorem{Proposition}[Theorem]{命题}
+\newtheorem{Definition}[Theorem]{定义}
+\newtheorem{Example}[Theorem]{例}
+
+%%参考文献设置
+\newcommand{\reference}{
+%\nocite{*}   %打开此选项会列出bib里面的所有参考文献
+\bibliographystyle{unsrt} %规定了参考文献的格式
+\begin{center}%居中
+	\bibliography{reference} %调出LaTeX生成参考文献列表
+\end{center}
+}
+
+%%文本框设置
+\newcommand{\tbox}[1]{
+\begin{center}
+\begin{tcolorbox}[colback=gray!10,%gray background
+                  colframe=black,% black frame colour
+                  width=8cm,% Use 8cm total width,
+                  arc=1mm, auto outer arc,
+                  boxrule=0.5pt,
+                 ]
+{#1}
+\end{tcolorbox}
+\end{center}
+}
+
+%%页眉设置
+\pagestyle{fancy}
+\fancyhead[L]{}%%留空则不显示
+\fancyhead[C]{\fangsong 北京师范大学课程大作业}%%留空则不显示
+\fancyhead[R]{}%%留空则不显示
+
+
+%封面页设置
+{   
+    \title{ \vspace{3cm} \heiti \Huge \textbf{{XXXX课程大作业}} \par
+    \vspace{1cm} 
+    \heiti \Large {\underline{XXXXXXXX}}    
+    \vspace{3cm} }%标题
+
+    \author{
+    \vspace{0.5cm}
+    \kaishu\Large 学院\ \dlmu[9cm]{文理学院} \\ %学院
+    \vspace{0.5cm}
+    \kaishu\Large 专业\ \dlmu[9cm]{人工智能} \\ %班级
+    \vspace{0.5cm}
+    \kaishu\Large 学号\ \dlmu[9cm]{20243108xxxx} \qquad  \\ %学号
+    \vspace{0.5cm}
+    \kaishu\Large 姓名\ \dlmu[9cm]{XXX} \qquad \\ %姓名 
+        }
+        
+    \date{\today} % 默认为今天的日期，可以注释掉不显示日期
+}
+
+%%在这里可更改封面logo
+\newcommand{\cover}{
+%%封面校名logo，图片都在figures文件夹里
+\begin{figure}
+	\centering
+        \vspace{2cm}
+	\includegraphics[width=0.8\textwidth]{figures/bnu_logo.pdf}
+\end{figure} 
+
+\maketitle
+}
+
+\def\groupcover{
+
+	\begin{titlepage}                                               %用于多人报告的封面 For multiple report
+		\centering
+		\vspace{1cm}
+		\includegraphics[width=0.8\textwidth]{figures/bnu_logo.pdf} % 插入你的图片，调整文件名和路径     Insert your picture, adjust the file name and path
+		\par\vspace{1cm}
+		{ \heiti \Huge \textbf{{xxxxx实践课程大作业}} \par
+			\vspace{1cm} 
+			\heiti \Large {\underline{基于RAG的智能问答系统设计与实现}}    
+			\vspace{3cm} }%标题
+		
+		\vspace{1cm}
+		% 组员信息  Group information
+		\begin{center}
+			\centering
+            \vspace{0.5cm}
+            \textbf{组长：} \dlmu[4cm]{张明} \quad \textbf{学号：} \dlmu[4cm]{202300000000} \\
+            \vspace{0.5cm}
+            \textbf{组员：} \dlmu[4cm]{李华} \quad \textbf{学号：} \dlmu[4cm]{202300000000} \\
+            \vspace{0.5cm}
+            \textbf{组员：} \dlmu[4cm]{王芳} \quad \textbf{学号：} \dlmu[4cm]{202300000000} \\
+            \vspace{0.5cm}
+            \textbf{组员：} \dlmu[4cm]{刘强} \quad \textbf{学号：} \dlmu[4cm]{202300000000} \\
+		\end{center}
+		
+		% 分工情况  Cooperation
+		\vspace{2cm}
+		\section*{分工情况}
+		\addcontentsline{toc}{section}{分工情况}
+    		
+        \begin{center}
+            \zihao{4}
+            \begin{tabular}{ll}
+                \textbf{张明}： & 项目整体架构设计、RAG系统算法研究与方法论撰写 \\
+                \textbf{李华}： & 数据预处理、模型训练、性能评估与可视化分析 \\
+                \textbf{王芳}： & 文献调研、系统实现细节、实验结果总结 \\
+                \textbf{刘强}： & 系统测试、性能优化、报告排版与最终审核 \\
+            \end{tabular}
+        \end{center}
+		
+		\vfill
+		\today % 日期   Date
+	\end{titlepage}
+}
